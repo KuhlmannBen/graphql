@@ -1,0 +1,39 @@
+type User{
+    id: ID!
+    username: String!
+    name: String!
+    lvl: int!
+    xp: int!
+    imageId: ID!
+    email: String!
+    phonenumber: String!
+    joindate: DateTime!
+    posts: [Post!]!
+    followers: [User!]!
+    following:[User!]!
+}
+type Post{
+    id: ID!
+    date: DateTime!
+    autor: User!
+    visibility: Enum!
+    default: Boolean!
+    addetUsers: [User!]!
+    blockedUsers: [User!]!
+    type: Enum!
+    likes: [like!]!
+    comments:[Comment!]!
+}
+type Like{
+    postId: ID!
+    userId: ID!
+    date: DateTime!
+}
+
+type Comment{
+    id: ID!
+    postId: ID!
+    userId: ID!
+    date: DateTime!
+    likes: [Like!]!
+}
