@@ -2,6 +2,8 @@ type User{
     id: ID!
     username: String!
     name: String!
+    subtitle: String!
+    privacy: Enum!
     lvl: int!
     xp: int!
     imageId: ID!
@@ -11,7 +13,23 @@ type User{
     posts: [Post!]!
     followers: [User!]!
     following:[User!]!
+    links: [Link!]!
 }
+
+type Link{
+    instagramLink: String!
+    facebookLink: String!
+    youtubeLink: String!
+    snapchatLink: String!
+    twitterLink: String!
+    xingLink: String!
+    linkedinLink: String!
+    soundcloudLink: String!
+    veroLink: String!
+    twitchLink: String!
+    viscoLink: String!
+}
+
 type Post{
     id: ID!
     date: DateTime!
