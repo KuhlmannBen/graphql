@@ -46,7 +46,10 @@ type Post{
     type: Enum!
     likes: [like]
     comments:[Comment]
+    location: String
+    marked: [User]
 }
+
 type Like{
     postId: ID!
     userId: ID!
