@@ -22,17 +22,8 @@ type User{
 }
 
 type Link{
-    instagramLink: String
-    facebookLink: String
-    youtubeLink: String
-    snapchatLink: String
-    twitterLink: String
-    xingLink: String
-    linkedinLink: String
-    soundcloudLink: String
-    veroLink: String
-    twitchLink: String
-    viscoLink: String
+    url: String!
+    providerName: Enum!
 }
 
 type Post{
