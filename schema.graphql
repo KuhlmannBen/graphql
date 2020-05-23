@@ -1,33 +1,38 @@
+
+type Query{
+    users: [User!]!
+}
+
 type User{
     id: ID!
-    username: String!
-    name: String!
-    subtitle: String!
-    privacy: Enum!
-    lvl: int!
-    xp: int!
-    imageId: ID!
-    email: String!
-    phonenumber: String!
-    joindate: DateTime!
-    posts: [Post!]!
-    followers: [User!]!
-    following:[User!]!
-    links: [Link!]!
+    username: String
+    name: String
+    subtitle: String
+    privacy: Enum
+    lvl: int
+    xp: int
+    imageId: ID
+    email: String
+    phonenumber: String
+    joindate: DateTime
+    posts: [Post]
+    followers: [User]
+    following:[User]
+    links: [Link]
 }
 
 type Link{
-    instagramLink: String!
-    facebookLink: String!
-    youtubeLink: String!
-    snapchatLink: String!
-    twitterLink: String!
-    xingLink: String!
-    linkedinLink: String!
-    soundcloudLink: String!
-    veroLink: String!
-    twitchLink: String!
-    viscoLink: String!
+    instagramLink: String
+    facebookLink: String
+    youtubeLink: String
+    snapchatLink: String
+    twitterLink: String
+    xingLink: String
+    linkedinLink: String
+    soundcloudLink: String
+    veroLink: String
+    twitchLink: String
+    viscoLink: String
 }
 
 type Post{
@@ -36,11 +41,11 @@ type Post{
     autor: User!
     visibility: Enum!
     default: Boolean!
-    addetUsers: [User!]!
-    blockedUsers: [User!]!
+    addetUsers: [User]
+    blockedUsers: [User]
     type: Enum!
-    likes: [like!]!
-    comments:[Comment!]!
+    likes: [like]
+    comments:[Comment]
 }
 type Like{
     postId: ID!
@@ -53,5 +58,5 @@ type Comment{
     postId: ID!
     userId: ID!
     date: DateTime!
-    likes: [Like!]!
+    likes: [Like]
 }
